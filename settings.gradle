@@ -1,0 +1,13 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "CustomPluginDemo"
+include ':app'
+include ':mylibrary'
+include ':CustomGradlePlugin'
+include ':custom-plugin'

@@ -1,0 +1,39 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+    id 'maven-publish'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+dependencies {
+    implementation gradleApi()
+}
+
+group 'com.example.plugin'
+version '1.0.6'
+
+publishing {
+    publications {
+        myPlugin(MavenPublication) {
+            artifactId = "wzp"
+            from components.java
+            groupId = group
+            version = version
+        }
+    }
+    repositories {
+        maven {
+            allowInsecureProtocol true
+            name = "nexus"
+            url = "http://localhost:8081/repository/maven-releases/"
+            credentials {
+                username "admin"
+                password "admin123"
+            }
+        }
+    }
+}
