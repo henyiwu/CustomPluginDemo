@@ -1,2 +1,2 @@
 # CustomPluginDemo
-自定义插件并发布
+自定义gradle插件并发布
