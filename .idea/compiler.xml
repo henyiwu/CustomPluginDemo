@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
       <module name="CustomPluginDemo.app" target="11" />
+      <module name="CustomPluginDemo.hello-world-library" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
